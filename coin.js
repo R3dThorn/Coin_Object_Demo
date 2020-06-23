@@ -18,8 +18,9 @@ let coin = {
 };
 
 function display20Flips(){
-    let textBox = document.createElement('p')
     for(let i=0; i<20; i++){
+        let textBox = document.createElement('p')
+        textBox.style.margin = "5px"
         coin.flip()
         textBox.append(coin.toString())
         document.body.append(textBox)
