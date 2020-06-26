@@ -13,7 +13,7 @@ let coin = {
             "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/2008_HI_Proof.png/800px-2008_HI_Proof.png"
         image.style.width = "300px"
         image.style.height = "300px"
-        return document.body.append(image)
+        return image
     }
 };
 
@@ -30,6 +30,7 @@ function display20Flips(){
 function display20Images(){
     for(let i=0; i<20; i++){
         coin.flip()
-        coin.toHTML()
+        document.body.append(coin.toHTML())
     }
+    return console.log("Done crafting images")
 }
